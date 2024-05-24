@@ -6,7 +6,7 @@ export default {
       colors: {
         "soft-blue": "hsl(231, 69%, 60%)",
         "soft-red": "hsl(0, 94%, 66%)",
-        "Grayish Blue": "hsl(229, 8%, 60%)",
+        "grayish-blue": "hsl(229, 8%, 60%)",
         "dark-blue": "hsl(229, 31%, 21%)"
       },
       fontFamily: {
