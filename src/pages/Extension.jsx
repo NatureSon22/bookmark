@@ -9,8 +9,8 @@ const Extension = () => {
           Download the extension
         </p>
         <p className="mt-3 mb-7 text-grayish-blue leading-7">
-          We’ve got more browsers in the pipeline. Please do let us know if
-          you’ve got a favourite you’d like us to prioritize.
+          We&apos;ve got more browsers in the pipeline. Please do let us know if
+          you&apos;ve got a favourite you&apos;d like us to prioritize.
         </p>
       </div>
 
