@@ -2,28 +2,28 @@ import { features } from "../constants";
 
 const FeatureTab = ({ feature }) => {
   return (
-    <div className="w-full mt-5 grid place-items-center gap-10">
-      <div className="w-full grid place-items-center relative">
+    <div className="mt-5 grid w-full place-items-center gap-10 md:gap-14 lg:mr-auto lg:flex lg:max-w-[102em] xl:gap-36 ">
+      <div className="relative grid w-full place-items-center">
         <img
-          className="pb-12 w-[90%] max-w-[600px] z-10"
+          className="z-10 h-full w-[90%] max-w-[600px] object-cover pb-12 lg:max-w-[700px] lg:place-self-end"
           src={features[feature].img}
           alt=""
         />
-        <div className="w-[80%] h-[85%] bg-soft-blue absolute left-0 bottom-0 rounded-r-full"></div>
+        <div className="absolute bottom-0 left-0 h-[85%] w-[80%] rounded-r-full bg-soft-blue md:w-[70%] lg:-bottom-14 lg:h-[90%] lg:w-[90%]"></div>
       </div>
 
-      <div className="w-[90%] max-w-[35em] text-center">
-        <p className="font-semibold mb-3 text-[1.4rem] leading-10 text-dark-blue sm:text-[1.8rem] sm:mb-5">
+      <div className="w-[90%] max-w-[35em] text-center lg:text-left">
+        <p className="mb-3 text-[1.4rem] font-semibold leading-10 text-dark-blue sm:mb-5 sm:text-[1.8rem] md:text-[2.4rem]">
           {features[feature].label}
         </p>
-        <p className=" text-grayish-blue leading-7 sm:text-[1.2rem] sm:leading-8">
+        <p className="mb-9 leading-7 text-grayish-blue sm:text-[1.2rem] sm:leading-8 md:text-[1.35rem] md:leading-10">
           {features[feature].info}
         </p>
-      </div>
 
-      <button className=" px-6 py-3 bg-soft-blue rounded-md text-white shadow-lg">
-        More Info
-      </button>
+        <button className=" rounded-md bg-soft-blue px-6 py-3 text-white shadow-lg lg:place-self-start">
+          More Info
+        </button>
+      </div>
     </div>
   );
 };

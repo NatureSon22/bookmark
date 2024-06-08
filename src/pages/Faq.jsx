@@ -7,19 +7,19 @@ const Faq = () => {
 
   const handleClick = (event, id) => {
     event.preventDefault(); // Prevent the default toggle behavior
-    setFaqIndex(faqIndex === id ? null : id); // Toggle the clicked FAQ
+    setFaqIndex(faqIndex === id ? null : id);
   };
 
   return (
-    <section className="w-full py-20 grid place-items-center gap-2">
-      <div className="w-[90%] max-w-[40em] grid place-items-center">
-        <div className="text-center grid place-items-center">
-          <p className="font-semibold text-[1.6rem] leading-9 text-dark-blue sm:text-[2rem] sm:mb-5">
+    <section className="grid w-full place-items-center gap-2 py-20 lg:py-32">
+      <div className="grid w-[90%] max-w-[40em] place-items-center">
+        <div className="grid place-items-center text-center">
+          <p className="text-[1.6rem] font-semibold leading-9 text-dark-blue sm:mb-5 sm:text-[2rem]">
             Frequently Asked Questions
           </p>
-          <p className="max-w-[35em] mt-3 mb-7 text-grayish-blue leading-7 sm:text-[1.15rem] sm:leading-8 sm:mb-10">
-            Here are some of our FAQs. If you have any other questions you&apos;d
-            like answered, please feel free to email us.
+          <p className="mb-7 mt-3 max-w-[35em] leading-7 text-grayish-blue sm:mb-10 sm:text-[1.15rem] sm:leading-8">
+            Here are some of our FAQs. If you have any other questions
+            you&apos;d like answered, please feel free to email us.
           </p>
         </div>
 
@@ -27,30 +27,30 @@ const Faq = () => {
           {faqs.map((faq) => (
             <details
               key={faq.id}
-              className="pt-7 pb-5 border-b-2 sm:pb-7"
+              className="border-b-2 pb-5 pt-7 sm:pb-7"
               open={faqIndex === faq.id}
             >
               <summary
-                className="text-dark-blue font-[500] list-none flex justify-between items-center gap-5 transition-all duration-300 cursor-pointer group"
+                className="group flex cursor-pointer list-none items-center justify-between gap-5 font-[500] text-dark-blue transition-all duration-300"
                 onClick={(event) => handleClick(event, faq.id)}
               >
-                <p className="sm:text-[1.2rem] group-hover:text-soft-red">
+                <p className="group-hover:text-soft-red sm:text-[1.2rem]">
                   {faq.question}
                 </p>
                 <img
-                  className={`sm:mr-5 transform transition-transform duration-300 ${faqIndex === faq.id ? "rotate-180" : ""}`}
+                  className={`transform transition-transform duration-300 sm:mr-5 ${faqIndex === faq.id ? "rotate-180" : ""}`}
                   src={arrow}
                   alt="Arrow"
                 />
               </summary>
-              <p className="w-fit pt-8 text-dark-blue leading-8 sm:text-[1.1rem] sm:pt-10">
+              <p className="w-fit pt-8 leading-8 text-dark-blue sm:pt-10 sm:text-[1.1rem]">
                 {faq.answer}
               </p>
             </details>
           ))}
         </div>
 
-        <button className="px-7 py-3 mt-10 text-sm bg-soft-blue text-white flex-1 rounded-md sm:mt-16">
+        <button className="mt-10 flex-1 rounded-md bg-soft-blue px-7 py-3 text-sm text-white sm:mt-16">
           More Info
         </button>
       </div>

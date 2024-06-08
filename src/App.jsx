@@ -12,11 +12,11 @@ const App = () => {
   const [openNav, setOpenNav] = useState(false);
 
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="flex min-h-screen flex-col">
       <MobileNav openNav={openNav} setOpenNav={setOpenNav}></MobileNav>
       <NavBar openNav={openNav} setOpenNav={setOpenNav}></NavBar>
 
-      <div className="flex-1 grid place-items-center">
+      <div className="grid flex-1 place-items-center">
         <Hero></Hero>
         <Features></Features>
         <Extension></Extension>
