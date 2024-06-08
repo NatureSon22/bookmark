@@ -9,3 +9,10 @@
         @apply font-rubik text-base
     }
 }
+
+@layer components {
+    .remove-arrow::-webkit-details-marker {
+        @apply hidden;
+    }
+    
+}
